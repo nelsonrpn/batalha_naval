@@ -5,5 +5,5 @@ Suspeito que seja pq tá diminuindo a vida do jogador mesmo depois de acertar um
 mas pode ser outra parada tbm, os testes estao duvidosos
 (/\ profissionalismo)
 
-tasks aqui mesmo pq criar task no git é una mierda
--fazer aparecer mensagem pra quando um navio é afundado
+tasks aqui mesmo:
+- fazer aparecer mensagem pra quando um navio é afundado
