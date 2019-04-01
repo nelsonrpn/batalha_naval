@@ -188,9 +188,8 @@ void attack(int map[][10],int *enemyLife,int player){
     scanf("%d %d",&x,&y);
     
     if(map[x][y] >= 10) map[x][y] -= 10;
-    
-    //Somente se não cair em if, verificará se acasa já está descoberta
-    else if(map[x][y] < 10) return 0;
+    //Se a casa já está descoberta, sai da função
+    else return 0;
     
     system("clear");
 
