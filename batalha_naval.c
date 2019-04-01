@@ -23,6 +23,7 @@ typedef struct ship{
     5 = Porta-Aviões
 */
 
+
 //Printa o mapa durante alocação de navios no mapa
 void print_map_selection(int map[][10]){
     system("clear");
@@ -41,6 +42,7 @@ void print_map_selection(int map[][10]){
         printf("\n");
     }
 }
+    
 
 //Printa mapa durante jogo
 void print_map_game(int map[][10]){
@@ -63,6 +65,7 @@ void print_map_game(int map[][10]){
     }
 }
 
+    
 //Não entendi porque essa função funcionou, mas funcionou
 //Verifica se o navio cabe no local selecionado
 unsigned int it_fit(Ship nav,int map[][10],int x,int y){
@@ -80,6 +83,7 @@ unsigned int it_fit(Ship nav,int map[][10],int x,int y){
     return 1;
     }
 }
+    
 
 //Adiciona navio ao mapa
 void add_ship(Ship nav, int map[][10], int x, int y){
