@@ -50,7 +50,7 @@ void print_map_game(int map[][10]){
         for(int j = 0;j<10;j++){
             if(map[i][j] >= 10) printf(" #");
             else{
-                switch(map[i][j])x{
+                switch(map[i][j]){
                     case 0: printf(" ~");   break;
                     case 1: printf(" C");   break;
                     case 2: printf(" S");   break;
