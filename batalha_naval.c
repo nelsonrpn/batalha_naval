@@ -14,12 +14,16 @@ typedef struct ship{
 }Ship;
 
 /*  
+    Casas cobertas com valores > 10
+    e descobertar com valores < 10
+
     0/10 = Àgua
     1/11 = Corveta
     2/12 = Submarino
     3/13 = Fragata
     4/14 = Destroyer
     5/15 = Porta-Aviões
+    
 */
 
 
@@ -121,7 +125,7 @@ void input_ship(int map[][10], Ship nav){
     print_map_selection(map);
 }
 
-//"""Automatizar""" criação do navio e liberar memoria(falta o liberar memoria e criar a parte do automatizar rs)
+//"""Automatizar""" criação do navio e liberar memoria(falta a parte do automatizar rs)
 void set_game(int map[][10]){
 
     //Define navios
@@ -164,17 +168,30 @@ void set_game(int map[][10]){
     input_ship(map,fragata);
     input_ship(map,destroyer);
     input_ship(map,porta);
+    
+    free(corveta.name);
+    free(submarino.name);
+    free(fragata.name);
+    free(destroyer.name);
+    free(porta.name);
 }
 
 //Ataca nas coordenadas pedidas, revela a casa atacada, e recalcula a vida do jogador se acerta navio
 void attack(int map[][10],int *enemyLife,int player){
     int x,y;
+    
     system("clear");
     printf("Player %d turn\n",player);
     print_map_game(map);
+    
     printf("Selecione as coordenadas para disparar:\n");
     scanf("%d %d",&x,&y);
+    
     if(map[x][y] >= 10) map[x][y] -= 10;
+    
+    //Somente se não cair em if, verificará se acasa já está descoberta
+    else if(map[x][y] < 10) return 0;
+    
     system("clear");
 
     switch(map[x][y]){
@@ -202,7 +219,7 @@ void attack(int map[][10],int *enemyLife,int player){
             *enemyLife -= 1;
             break;
         }
-
+    
     print_map_game(map);
     sleep(2);
 }
