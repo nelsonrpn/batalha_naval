@@ -3,6 +3,16 @@
 #include <stdlib.h>
 
 
+//valCov para valor do navio coberto no mapa 'ingame'
+//valUnc para valor do navio descoberto no mapa 'ingame'
+
+typedef struct ship{
+    char *name;
+    int size;
+    int valCov;
+    int valUnc;
+}Ship;
+
 /*  
     -1 = Destroço
     0 = Àgua
