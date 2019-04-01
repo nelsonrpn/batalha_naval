@@ -2,3 +2,6 @@ Seguinte, eu te dou 10 e tu me da 20
 
 tasks aqui mesmo:
 - fazer aparecer mensagem pra quando um navio é afundado
+
+Mega task que jamais será feita:
+- fazer "IA" para jogar contra
