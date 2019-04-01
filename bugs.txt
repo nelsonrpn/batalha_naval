@@ -1,9 +1,8 @@
 Seguinte, eu te dou 10 e tu me da 20
 
 Jogo ta acabando sem ter acertado todos navios ainda
-Suspeito que seja pq tá diminuindo a vida do jogador mesmo depois de acertar uma casa já descoberta, mas sepa é outra coisa
-mas pode ser outra parada tbm, os testes estao duvidosos
-(/\ profissionalismo)
+tá diminuindo a vida do jogador quando acerta uma casa já descoberta
+
 
 tasks aqui mesmo:
 - fazer aparecer mensagem pra quando um navio é afundado
