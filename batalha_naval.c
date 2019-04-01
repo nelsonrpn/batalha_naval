@@ -14,13 +14,12 @@ typedef struct ship{
 }Ship;
 
 /*  
-    -1 = Destroço
-    0 = Àgua
-    1 = Corveta
-    2 = Submarino
-    3 = Fragata
-    4 = Destroyer
-    5 = Porta-Aviões
+    0/10 = Àgua
+    1/11 = Corveta
+    2/12 = Submarino
+    3/13 = Fragata
+    4/14 = Destroyer
+    5/15 = Porta-Aviões
 */
 
 
