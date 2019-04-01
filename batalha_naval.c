@@ -23,6 +23,7 @@ typedef struct ship{
     5 = Porta-Aviões
 */
 
+//Printa o mapa durante alocação de navios no mapa
 void print_map_selection(int map[][10]){
     system("clear");
     printf("  0 1 2 3 4 5 6 7 8 9\n");
@@ -41,6 +42,7 @@ void print_map_selection(int map[][10]){
     }
 }
 
+//Printa mapa durante jogo
 void print_map_game(int map[][10]){
     printf("  0 1 2 3 4 5 6 7 8 9\n");
     for(int i = 0;i<10;i++){
@@ -59,6 +61,8 @@ void print_map_game(int map[][10]){
     }
 }
 
+//Não entendi porque essa função funcionou, mas funcionou
+//Verifica se o navio cabe no local selecionado
 unsigned int it_fit(Ship nav,int map[][10],int x,int y){
     if(nav.dir == 'H'){
         for(int i = 0;i<nav.size;i++){
@@ -75,6 +79,7 @@ unsigned int it_fit(Ship nav,int map[][10],int x,int y){
     }
 }
 
+//Adiciona navio ao mapa
 void add_ship(Ship nav, int map[][10], int x, int y){
     if(it_fit(nav,map,x,y)){
         if(nav.dir == 'H'){
@@ -92,6 +97,7 @@ void add_ship(Ship nav, int map[][10], int x, int y){
     }
 }
 
+//Pede coordenadas de entrada pra adicionar navio
 void input_ship(int map[][10], Ship nav){
     int y,x,check = 0;
 
@@ -110,7 +116,7 @@ void input_ship(int map[][10], Ship nav){
     print_map_selection(map);
 }
 
-//Automatizar criação do navio e liberar memoria(falta o liberar memoria rs)
+//"""Automatizar""" criação do navio e liberar memoria(falta o liberar memoria e criar a parte do automatizar rs)
 void set_game(int map[][10]){
 
     //Define navios
@@ -155,6 +161,7 @@ void set_game(int map[][10]){
     input_ship(map,porta);
 }
 
+//Ataca nas coordenadas pedidas, revela a casa atacada, e recalcula a vida do jogador se acerta navio
 void attack(int map[][10],int *enemyLife,int player){
     int x,y;
     system("clear");
@@ -195,6 +202,8 @@ void attack(int map[][10],int *enemyLife,int player){
     sleep(2);
 }
 
+
+//Retorna quantidade de casas do mapa que estão ocupadas por navios
 int how_many_lifes(int map[][10]){
     int lifes = 0;
     for(int i = 0;i<10;i++){
@@ -205,6 +214,7 @@ int how_many_lifes(int map[][10]){
     return lifes;
 }
 
+//Inicializa mapa
 void start_map(int map[][10]){
     for(int i = 0;i<10;i++){
         for(int j = 0;j<10;j++){
