@@ -30,13 +30,13 @@ void print_map_selection(int map[][10]){
     for(int i = 0;i<10;i++){
         printf("%d",i);
         for(int j = 0;j<10;j++){
-            if(map[i][j] == 10) printf(" ~");
-            else if(map[i][j] == -1) printf(" #");
-            else if(map[i][j] == 11) printf(" C");
-            else if(map[i][j] == 12) printf(" S");
-            else if(map[i][j] == 13) printf(" F");
-            else if(map[i][j] == 14) printf(" D");
-            else if(map[i][j] == 15) printf(" P");
+            switch(map[i][j]){
+                case 10: printf(" ~");  break;
+                case 11: printf(" C");  break;
+                case 12: printf(" S");  break;
+                case 13: printf(" F");  break;
+                case 14: printf(" D");  break;
+                case 15: printf(" P");  break;
         }
         printf("\n");
     }
@@ -49,13 +49,15 @@ void print_map_game(int map[][10]){
         printf("%d",i);
         for(int j = 0;j<10;j++){
             if(map[i][j] >= 10) printf(" #");
-            else if(map[i][j] == 0) printf(" ~");
-            else if(map[i][j] == -1) printf(" #");
-            else if(map[i][j] == 1) printf(" C");
-            else if(map[i][j] == 2) printf(" S");
-            else if(map[i][j] == 3) printf(" F");
-            else if(map[i][j] == 4) printf(" D");
-            else if(map[i][j] == 5) printf(" P");
+            else{
+                switch(map[i][j])x{
+                    case 0: printf(" ~");   break;
+                    case 1: printf(" C");   break;
+                    case 2: printf(" S");   break;
+                    case 3: printf(" F");   break;
+                    case 4: printf(" D");   break;
+                    case 5: printf(" P");   break;
+                }
         }
         printf("\n");
     }
