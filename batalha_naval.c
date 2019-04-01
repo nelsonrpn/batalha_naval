@@ -242,9 +242,9 @@ void main(){
 
     system("clear");
     printf("Player 1");
-    print_map_game(mapPlayer1);
+    print_map_selection(mapPlayer1);
     printf("Player 2");
-    print_map_game(mapPlayer2);
+    print_map_selection(mapPlayer2);
     printf("\n\tFim de jogo\n\t JOGADOR %d VENCEU\n!",winner);
 
 
