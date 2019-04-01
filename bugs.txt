@@ -1,8 +1,0 @@
-Seguinte, eu te dou 10 e tu me da 20
-
-Jogo ta acabando sem ter acertado todos navios ainda
-tá diminuindo a vida do jogador quando acerta uma casa já descoberta
-
-
-tasks aqui mesmo:
-- fazer aparecer mensagem pra quando um navio é afundado
