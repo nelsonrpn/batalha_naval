@@ -243,12 +243,14 @@ void main(){
     int player2life = how_many_lifes(mapPlayer2);
 
     while(1){
-        attack(mapPlayer2,&player1life,1);
+        //Player 1 turn, attack on player 2 map and life
+        attack(mapPlayer2,&player2life,1);
         if(player2life <= 0){
             winner = 1;
             break;
         }
-        attack(mapPlayer1,&player2life,2);
+        //Player 2 turn, attack on player 1 map and life
+        attack(mapPlayer1,&player1life,2);
         if(player1life <= 0){
             winner = 2;
             break;
