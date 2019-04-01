@@ -106,7 +106,7 @@ void input_ship(int map[][10], Ship nav){
         scanf("%d %d %c",&x,&y,&nav.dir);
 
         if(!it_fit(nav,map,x,y))
-            printf("Coordenada invalida para posicionamento de Corveta!\n");
+            printf("Coordenada invalida para posicionamento de %s!\n",nav.name);
         else{
             add_ship(nav,map,x,y);
             check = 1;
