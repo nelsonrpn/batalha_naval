@@ -125,7 +125,7 @@ void input_ship(int map[][10], Ship nav){
     print_map_selection(map);
 }
 
-//"""Automatizar""" criação do navio e liberar memoria(falta a parte do automatizar rs)
+//Fase de posicionamento
 void set_game(int map[][10]){
 
     //Define navios
