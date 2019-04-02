@@ -11,6 +11,7 @@ typedef struct ship{
     int size;
     int valCov;
     int valUnc;
+    char dir;
 }Ship;
 
 /*  
@@ -41,11 +42,11 @@ void print_map_selection(int map[][10]){
                 case 13: printf(" F");  break;
                 case 14: printf(" D");  break;
                 case 15: printf(" P");  break;
+            }
         }
         printf("\n");
     }
-}
-    
+}    
 
 //Printa mapa durante jogo
 void print_map_game(int map[][10]){
@@ -63,24 +64,24 @@ void print_map_game(int map[][10]){
                     case 4: printf(" D");   break;
                     case 5: printf(" P");   break;
                 }
+            }
         }
         printf("\n");
     }
 }
 
-    
-//Não entendi porque essa função funcionou, mas funcionou
+
 //Verifica se o navio cabe no local selecionado
 unsigned int it_fit(Ship nav,int map[][10],int x,int y){
     if(nav.dir == 'H'){
         for(int i = 0;i<nav.size;i++){
-            if(map[x][y] != 10 && map[x][y] != 0) return 0;
+            if(map[x][y] != 10 || x > 9 || y > 9) return 0;
             y++;
         }
     }
     else if(nav.dir == 'V'){
         for(int i = 0;i<nav.size;i++){
-            if(map[x][y] != 10 && map[x][y] != 0) return 0;
+            if(map[x][y] != 10 || x > 9 || y > 9) return 0;
             x++;
         }
     return 1;
@@ -169,11 +170,11 @@ void set_game(int map[][10]){
     input_ship(map,destroyer);
     input_ship(map,porta);
     
-    free(corveta.name);
-    free(submarino.name);
-    free(fragata.name);
-    free(destroyer.name);
-    free(porta.name);
+    //free(corveta.name);
+    //free(submarino.name);
+    //free(fragata.name);
+    //free(destroyer.name);
+    //free(porta.name);
 }
 
 //Ataca nas coordenadas pedidas, revela a casa atacada, e recalcula a vida do jogador se acerta navio
@@ -189,7 +190,7 @@ void attack(int map[][10],int *enemyLife,int player){
     
     if(map[x][y] >= 10) map[x][y] -= 10;
     //Se a casa já está descoberta, sai da função
-    else return 0;
+    else return;
     
     system("clear");
 
