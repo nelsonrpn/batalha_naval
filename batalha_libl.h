@@ -17,7 +17,6 @@ void print_map_selection(int map[][10]);
 //Printa mapa durante jogo
 void print_map_game(int map[][10]);
 
-
 //Verifica se o navio cabe no local selecionado
 unsigned int it_fit(Ship nav,int map[][10],int x,int y);
 
