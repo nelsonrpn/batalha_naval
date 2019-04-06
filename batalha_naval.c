@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "batalha.h"
+#include "batalha_lib.h"
 
 void main(){
     int mapPlayer1[10][10];
