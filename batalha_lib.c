@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include <batalha_lib.h>
+#include "batalha_lib.h"
 
 
 /*
